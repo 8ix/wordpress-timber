@@ -1,4 +1,5 @@
 <?php
+$timber = new Timber\Timber();
 
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
 function disable_gutenberg_editor()

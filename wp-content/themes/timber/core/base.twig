@@ -1,0 +1,22 @@
+{% block head %}
+    {% include "core/html-head.twig" %}
+        {% block head_append '' %}
+    </head>
+{% endblock %}
+
+    <body class="{{ body_class }}">
+        {% block header %}
+            {% include "components/header/header.twig" %}
+        {% endblock %}
+
+        {% block content ''%}
+
+        {% block footer %}
+            {% include "components/footer/footer.twig" %}
+        {% endblock %}
+
+        {% block footer_after '' %}
+
+        {{ function('wp_footer') }}
+    </body>
+</html>
