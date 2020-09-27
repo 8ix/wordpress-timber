@@ -1,11 +1,22 @@
 /* CSS RESET */
 @import 'views/core/reset.scss';
 
-/* Theme Variables */
+/* Font Settings */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+$fontFamily: 'Oswald', sans-serif;
 
+/* Colour Settings */
+$backgroundColour: #fff;
+
+$primaryColour: #000;
+$secondaryColour: #0110;
+$tertiaryColour: #fff;
 
 /* Register Core Styles */
 @import 'views/core/base.scss';
+
+/* UI Components */
+@import 'views/components/UI/navigation/navigation.scss';
 
 /* Register Components */
 @import 'views/components/header/header.scss';
