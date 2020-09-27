@@ -1,4 +1,6 @@
-Featconst { watch, series } = require('gulp');
+const { watch, series } = require('gulp');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 function clean(cb) {
   // body omitted
@@ -11,11 +13,15 @@ function javascript(cb) {
 }
 
 function scss(cb) {
-  // body omitted
+  gulp.src(['theme.scss'])
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest('dist'));
   cb();
 }
 
 exports.default = function() {
-  watch('src/*.css', scss);
+  // You can use a single task
+  watch(['*.scss'], scss);
+  // Or a composed task
   watch('src/*.js', series(clean, javascript));
 };
