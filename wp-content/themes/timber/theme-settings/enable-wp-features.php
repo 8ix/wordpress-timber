@@ -14,9 +14,10 @@ add_action('init', 'wpb_menus');
 
 
 // Load the theme stylesheets
-function theme_styles()
+function theme_assets()
 {
     // Load all of the styles that need to appear on all pages
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/theme.css');
+    wp_enqueue_script('script', get_template_directory_uri() . '/dist/theme.js');
 }
-add_action('wp_enqueue_scripts', 'theme_styles');
+add_action('wp_enqueue_scripts', 'theme_assets');
