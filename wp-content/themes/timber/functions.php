@@ -1,8 +1,9 @@
 <?php
+/* Init Timber - Used for Twig Scaffolding of pages see views directory */
 $timber = new Timber\Timber();
 
-add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
-function disable_gutenberg_editor()
-{
-    return false;
-}
+//Disable Core Services
+include_once 'theme-settings/disable-wp-features.php';
+
+//Enable Core Services
+include_once 'theme-settings/enable-wp-features.php';
