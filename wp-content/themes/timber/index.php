@@ -1,5 +1,3 @@
 <?php
-$timber = new Timber\Timber();
-$context = initTimberTheme();
-
+$context = $timber::context();
 $timber::render('templates/index.twig', $context);

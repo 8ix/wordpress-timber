@@ -1,1 +1,4 @@
-HEADER
+<div class="header">  
+    {% include 'components/UI/navigation/navigation.twig'
+        with {'navigation': header.menu.items} only %}
+</div>

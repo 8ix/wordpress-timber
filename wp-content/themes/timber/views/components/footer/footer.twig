@@ -1,1 +1,4 @@
-FOOTER
+<ul class="nav-main">
+    {% include 'components/UI/navigation/navigation.twig'
+        with {'navigation': footer.menu.items} only %}
+</ul>
