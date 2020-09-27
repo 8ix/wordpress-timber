@@ -1,7 +1,7 @@
 {% extends "core/base.twig" %}
 
 {% block content %}
-    {% block posts %}
-        <h1>Hello</h1>
-    {% endblock %}
+    <h1>{{site.name}}</h1>
+    <h2>{{site.description}}</h2>
+    <a href="{{site.url}}" target="_blank">{{site.url}}</a>
 {% endblock %}

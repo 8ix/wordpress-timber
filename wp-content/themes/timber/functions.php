@@ -16,7 +16,8 @@ function add_to_context($context)
         'menu' => new Timber\Menu('navigation')
     ];
     $context['footer'] = [
-        'menu' => new Timber\Menu('footer')
+        'menu' => new Timber\Menu('footer'),
+        'date' => date('Y')
     ];
 
     return $context;
