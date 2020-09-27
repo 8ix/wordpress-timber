@@ -1,3 +1,13 @@
+/* CSS RESET */
+@import 'views/core/reset.scss';
+
+/* Theme Variables */
 
 
+/* Register Core Styles */
+@import 'views/core/structure.scss';
+
+/* Register Components */
+@import 'views/components/header/header.scss';
+@import 'views/components/footer/footer.scss';
 

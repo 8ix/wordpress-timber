@@ -21,7 +21,7 @@ function scss(cb) {
 
 exports.default = function() {
   // You can use a single task
-  watch(['*.scss'], scss);
+  watch(['*.scss','**/*.scss','**/**/*.scss'], scss);
   // Or a composed task
   watch('src/*.js', series(clean, javascript));
 };
