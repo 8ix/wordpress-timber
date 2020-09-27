@@ -5,6 +5,13 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
 
+function wpb_menus()
+{
+    register_nav_menu('navigation', __('Navigation'));
+    register_nav_menu('footer', __('Footer Navigation'));
+}
+add_action('init', 'wpb_menus');
+
 
 // Load the theme stylesheets
 function theme_styles()
